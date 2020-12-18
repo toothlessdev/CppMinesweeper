@@ -6,11 +6,15 @@
 class Game {
 private:
 	Map* map;
-	int mapX, mapY;
 	int mineSize;
+	bool isDisplayed[SIZE][SIZE];
 public:
-	Game(int mapX, int mapY, int mineSize);
+	Game(int mineSize);
 	~Game();
+
+	void play();
+	void GetKeyboardInput();
+	
 };
 
 #endif

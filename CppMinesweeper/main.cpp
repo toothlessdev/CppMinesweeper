@@ -10,11 +10,17 @@ using namespace std;
 void Bfs(int x, int y, bool isVisited[SIZE][SIZE]);
 
 int main(void) {
+	Game game(12);
+
+	game.play();
+
+	/*
 	Map map(12);
 	
 	map.AllocateMines();
 	map.SetNumbers();
 	map.DisplayMap();
+	*/
 
 	return 0;
 }

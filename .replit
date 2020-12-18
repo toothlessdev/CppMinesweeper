@@ -1,0 +1,2 @@
+language = "bash"
+run = "clang++-7 -pthread -o main CppMinesweeper/Game.cpp CppMinesweeper/main.cpp CppMinesweeper/Map.cpp; ./main"
