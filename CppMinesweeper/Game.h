@@ -7,14 +7,10 @@ class Game {
 private:
 	Map* map;
 	int mineSize;
-	bool isDisplayed[SIZE][SIZE];
 public:
 	Game(int mineSize);
 	~Game();
-
-	void play();
-	void GetKeyboardInput();
-	
+	void Play();
 };
 
 #endif
