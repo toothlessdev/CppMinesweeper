@@ -43,15 +43,15 @@ void Map::AllocateMines() {
 }
 
 void Map::SetNumbers() {
-	const int dx[] = { 1,-1,0,0 };
-	const int dy[] = { 0,0,1,-1 };
+	const int dx[] = { -1,0,1,1,1,0,-1,-1 };
+	const int dy[] = { -1,-1,-1,0,1,1,1,0 };
 	for (int y = 0; y < SIZE; y++) {
 		for (int x = 0; x < SIZE; x++) {
-			for (int dir = 0; dir < 4; dir++) {
+			for (int dir = 0; dir < 8; dir++) {
 				int X = x + dx[dir], Y = y + dy[dir];
 				if ((0 <= X && X < SIZE) && (0 <= Y && Y < SIZE)) {
-					if (map[Y][X] == '*') {
-
+					if (map[Y][X] == '*' && map[y][x] != '*') {
+						map[y][x] ++;
 					}
 				}
 			}

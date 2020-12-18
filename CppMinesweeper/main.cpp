@@ -4,21 +4,22 @@
 #include <time.h>
 
 #include "Map.h"
-
-
+#include "Game.h"
 using namespace std;
 
 void Bfs(int x, int y, bool isVisited[SIZE][SIZE]);
 
 int main(void) {
-	Map map(15);
+	Map map(12);
 	
 	map.AllocateMines();
+	map.SetNumbers();
 	map.DisplayMap();
 
 	return 0;
 }
 
+/*******************************************************/
 
 void Bfs(int x, int y, bool isVisited[SIZE][SIZE]) {
 	const int dx[] = { 1,-1,0,0 };
